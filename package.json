@@ -1,0 +1,32 @@
+{
+  "name": "ecommerce",
+  "version": "1.0.0",
+  "description": "eCommerce Project",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run clean && gulp cssBundle && gulp jsBundle && npm run imagemin && gulp mincss && gulp es && gulp minify",
+    "start": "gulp watch",
+    "imagemin": "imagemin assets/images/* -o dist/assets/images && imagemin assets/icons/* -o dist/assets/icons",
+    "clean": "rimraf dist"
+  },
+  "author": "Kurt Reynolds",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^5.0.0",
+    "gulp-terser": "^2.1.0",
+    "imagemin": "^8.0.1",
+    "imagemin-cli": "^5.1.0",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
+    "rimraf": "^3.0.2",
+    "sass": "^1.43.4",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-uglifycss": "^1.1.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}
