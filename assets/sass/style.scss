@@ -17,7 +17,7 @@ header {
   .top-container {
     position: relative;
     padding: 0;
-    display: flex;
+    // display: flex;
     img {
       max-width: 100%;
     }
@@ -30,38 +30,62 @@ header {
     img {
       max-width: 40%;
     }
+    z-index: 2;
   }
 
   .top-text {
     position: absolute;
-    top: 10%;
-    left: 35%;
-    flex-shrink: 2;
+    top: 20%;
+    left: 40%;
+    transform: translate(-20%, -40%);
+    max-width: 100%;
+
     h1 {
-      transition: translate(-10%, -35%);
       font-family: 'Comfortaa', cursive, sans-serif;
       font-family: 'Dancing Script', cursive, sans-serif;
-      font-size: 5rem;
+      font-family: 'Shadows Into Light', cursive, sans-serif;
+      font-size: 4rem;
       color: $colorOne;
       text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+      max-width: 100%;
+      @media only screen and (max-width: 600px) {
+        font-size: 2rem;
+      }
     }
     h2 {
-      margin-left: 50%;
       font-family: 'Comfortaa', cursive, sans-serif;
       font-family: 'Dancing Script', cursive, sans-serif;
+      font-family: 'Shadows Into Light', cursive, sans-serif;
       font-size: 3rem;
       color: $colorFour;
       text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+      max-width: 100%;
+      @media only screen and (max-width: 600px) {
+        font-size: 2rem;
+      }
     }
   }
 
   .custom-nav {
     background-color: $colorFour;
 
-    a {
-      text-decoration: none;
-      font-weight: 700;
-      color: $colorTwo;
+    .navbar-nav {
+      .nav-item {
+        a {
+          text-decoration: none;
+          color: $colorTwo;
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  .nav-logo {
+    // background-color: white;
+    padding: 0;
+    margin: 0;
+    img {
+      max-width: 50%;
     }
   }
 }
@@ -79,10 +103,10 @@ header {
   }
 
   .add-cart-btn {
-    background-color: $colorThree;
+    background-color: $colorFive;
     border: solid 1px $colorOne;
-    font-size: 1.5rem;
-    color: $colorOne;
+    font-size: 2rem;
+    color: $colorTwo;
   }
 }
 
@@ -92,7 +116,8 @@ header {
     display: flex;
     justify-content: center;
     margin-top: 1%;
-    padding: 1%;
+    margin-bottom: 1%;
+    // padding: 1%;
     img {
       max-width: 60%;
     }
