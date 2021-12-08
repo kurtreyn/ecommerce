@@ -1,0 +1,9 @@
+header {
+  margin-bottom: 0;
+}
+header .hero-container {
+  padding: 0;
+}
+header .hero-container img {
+  max-width: 100%;
+}

@@ -1,0 +1,16 @@
+$colorOne: #e63946;
+$colorTwo: #f1faee;
+$colorThree: #a8dadc;
+$colorFour: #457b9d;
+$colorFive: #1d3557;
+
+header {
+  margin-bottom: 0;
+
+  .hero-container {
+    padding: 0;
+    img {
+      max-width: 100%;
+    }
+  }
+}
