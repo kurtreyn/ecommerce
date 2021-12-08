@@ -4,13 +4,115 @@ $colorThree: #a8dadc;
 $colorFour: #457b9d;
 $colorFive: #1d3557;
 
+body {
+  font-family: 'Comfortaa', cursive, sans-serif;
+  font-family: 'Dancing Script', cursive, sans-serif;
+  font-family: 'Shadows Into Light', cursive, sans-serif;
+  font-size: 1.4rem;
+}
+
 header {
   margin-bottom: 0;
 
-  .hero-container {
+  .top-container {
+    position: relative;
     padding: 0;
+    display: flex;
     img {
       max-width: 100%;
+    }
+  }
+
+  .top-logo {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    img {
+      max-width: 40%;
+    }
+  }
+
+  .top-text {
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    flex-shrink: 2;
+    h1 {
+      transition: translate(-10%, -35%);
+      font-family: 'Comfortaa', cursive, sans-serif;
+      font-family: 'Dancing Script', cursive, sans-serif;
+      font-size: 5rem;
+      color: $colorOne;
+      text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    }
+    h2 {
+      margin-left: 50%;
+      font-family: 'Comfortaa', cursive, sans-serif;
+      font-family: 'Dancing Script', cursive, sans-serif;
+      font-size: 3rem;
+      color: $colorFour;
+      text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    }
+  }
+
+  .custom-nav {
+    background-color: $colorFour;
+
+    a {
+      text-decoration: none;
+      font-weight: 700;
+      color: $colorTwo;
+    }
+  }
+}
+
+.custom-row {
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.products {
+  h5 {
+    font-size: 2rem;
+    color: $colorFive;
+    border-bottom: solid 1px $colorOne;
+  }
+
+  .add-cart-btn {
+    background-color: $colorThree;
+    border: solid 1px $colorOne;
+    font-size: 1.5rem;
+    color: $colorOne;
+  }
+}
+
+.custom-footer {
+  background-color: $colorFour;
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+    padding: 1%;
+    img {
+      max-width: 60%;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .footer-text {
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+    color: $colorTwo;
+  }
+
+  .footer-logo {
+    display: flex;
+    justify-content: center;
+    img {
+      max-width: 35%;
     }
   }
 }

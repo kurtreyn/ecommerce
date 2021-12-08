@@ -1,9 +1,102 @@
+body {
+  font-family: "Comfortaa", cursive, sans-serif;
+  font-family: "Dancing Script", cursive, sans-serif;
+  font-family: "Shadows Into Light", cursive, sans-serif;
+  font-size: 1.4rem;
+}
+
 header {
   margin-bottom: 0;
 }
-header .hero-container {
+header .top-container {
+  position: relative;
   padding: 0;
+  display: flex;
 }
-header .hero-container img {
+header .top-container img {
   max-width: 100%;
+}
+header .top-logo {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
+header .top-logo img {
+  max-width: 40%;
+}
+header .top-text {
+  position: absolute;
+  top: 10%;
+  left: 35%;
+  flex-shrink: 2;
+}
+header .top-text h1 {
+  transition: translate(-10%, -35%);
+  font-family: "Comfortaa", cursive, sans-serif;
+  font-family: "Dancing Script", cursive, sans-serif;
+  font-size: 5rem;
+  color: #e63946;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+header .top-text h2 {
+  margin-left: 50%;
+  font-family: "Comfortaa", cursive, sans-serif;
+  font-family: "Dancing Script", cursive, sans-serif;
+  font-size: 3rem;
+  color: #457b9d;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+header .custom-nav {
+  background-color: #457b9d;
+}
+header .custom-nav a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #f1faee;
+}
+
+.custom-row {
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.products h5 {
+  font-size: 2rem;
+  color: #1d3557;
+  border-bottom: solid 1px #e63946;
+}
+.products .add-cart-btn {
+  background-color: #a8dadc;
+  border: solid 1px #e63946;
+  font-size: 1.5rem;
+  color: #e63946;
+}
+
+.custom-footer {
+  background-color: #457b9d;
+}
+.custom-footer .social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 1%;
+  padding: 1%;
+}
+.custom-footer .social-icons img {
+  max-width: 60%;
+}
+.custom-footer .social-icons a {
+  text-decoration: none;
+}
+.custom-footer .footer-text {
+  display: flex;
+  justify-content: center;
+  margin-top: 1%;
+  color: #f1faee;
+}
+.custom-footer .footer-logo {
+  display: flex;
+  justify-content: center;
+}
+.custom-footer .footer-logo img {
+  max-width: 35%;
 }
