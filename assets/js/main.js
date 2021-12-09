@@ -2,7 +2,7 @@
 
 // https://github.com/keikaavousi/fake-store-api
 const shoppingCart = document.querySelector('.shopping-cart');
-const products = document.querySelectorAll('[data-product]');
+// const products = document.querySelectorAll('[data-product]');
 const cartBtns = document.querySelectorAll('[data-button]');
 const title = document.querySelectorAll('[data-title]');
 
@@ -23,6 +23,19 @@ async function getProducts() {
       womensClothing.push(data[x]);
     }
   }
+
+  for (let y = 0; y < mensClothing.length; y++) {
+    // console.log(mensClothing[y]);
+  }
+
+  // for (let i = 0; i < title.length; i++) {
+  //   // console.log(title[i]);
+  //   let val = title[i].getAttribute('data-title');
+  //   // console.log(val);
+  //   if (val === 'jacket') {
+  //     title.innerText = mensClothing[3].title;
+  //   }
+  // }
 }
 
 // console.log(mensClothing);
@@ -30,20 +43,21 @@ async function getProducts() {
 
 getProducts();
 
-function getValue() {
-  for (let i = 0; i < title.length; i++) {
-    // console.log(title[i]);
-    let val = title[i].getAttribute('data-title');
-    // console.log(val);
-  }
+for (let y = 0; y < mensClothing.length; y++) {
+  console.log(mensClothing[y]);
 }
 
-getValue();
+// function getValue() {
+//   for (let i = 0; i < title.length; i++) {
+//     // console.log(title[i]);
+//     let val = title[i].getAttribute('data-title');
+//     // console.log(val);
+//   }
+// }
+
+// getValue();
 
 // id: 3, id: 16, id: 18, id:19
-
-// console.log(mensClothing);
-// console.log(womensClothing);
 
 function clickTest() {
   console.log(`button was clicked`);
