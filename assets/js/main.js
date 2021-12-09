@@ -15,40 +15,30 @@ async function getProducts() {
   const data = await response.json();
   // console.log(data);
 
-  data.forEach((dat) => {
-    // console.log(`${dat.category}`);
-
-    Object.entries(dat).forEach(([key, value]) => {
-      // console.log(`${key} ${value}`);
-      if (dat.category === `men's clothing`) {
-        mensClothing.push(dat);
-      } else if (dat.category === `women's clothing`) {
-        womensClothing.push(dat);
-      }
-    });
-  });
-
-  for (let i = 0; i < mensClothing.length; i++) {
-    console.log(mensClothing[i]);
-
-    // let title = mensClothing[i].title;
-    // console.log(title);
+  for (let x = 0; x < data.length; x++) {
+    // console.log(data[x]);
+    if (data[x].category === `men's clothing`) {
+      mensClothing.push(data[x]);
+    } else if (data[x].category === `women's clothing`) {
+      womensClothing.push(data[x]);
+    }
   }
 }
 
+// console.log(mensClothing);
+// console.log(womensClothing);
+
 getProducts();
 
-// function getValue() {
-//   for (let p = 0; p < products.length; p++) {
-//     let productVal = products[p].getAttribute('data-product');
-//     // console.log(productVal);
-//     if (products[p].value === 'jacket') {
-//       title.innerText = '';
-//     }
-//   }
-// }
+function getValue() {
+  for (let i = 0; i < title.length; i++) {
+    // console.log(title[i]);
+    let val = title[i].getAttribute('data-title');
+    // console.log(val);
+  }
+}
 
-// getValue();
+getValue();
 
 // id: 3, id: 16, id: 18, id:19
 
