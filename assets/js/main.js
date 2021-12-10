@@ -2,9 +2,11 @@
 
 // https://github.com/keikaavousi/fake-store-api
 const shoppingCart = document.querySelector('.shopping-cart');
-// const products = document.querySelectorAll('[data-product]');
+const products = document.querySelectorAll('[data-product]');
 const cartBtns = document.querySelectorAll('[data-button]');
 const title = document.querySelectorAll('[data-title]');
+const card = document.querySelectorAll('.card');
+let thisTitle = '';
 
 const url = `https://fakestoreapi.com/products`;
 const mensClothing = [];
@@ -23,19 +25,7 @@ async function getProducts() {
       womensClothing.push(data[x]);
     }
   }
-
-  for (let y = 0; y < mensClothing.length; y++) {
-    // console.log(mensClothing[y]);
-  }
-
-  // for (let i = 0; i < title.length; i++) {
-  //   // console.log(title[i]);
-  //   let val = title[i].getAttribute('data-title');
-  //   // console.log(val);
-  //   if (val === 'jacket') {
-  //     title.innerText = mensClothing[3].title;
-  //   }
-  // }
+  loadProducts();
 }
 
 // console.log(mensClothing);
@@ -43,8 +33,22 @@ async function getProducts() {
 
 getProducts();
 
-for (let y = 0; y < mensClothing.length; y++) {
-  console.log(mensClothing[y]);
+function loadProducts() {
+  // let thisProduct = this.getAttribute('data-product');
+  // thisTitle = this.getAttribute('data-title');
+
+  for (let y = 0; y < mensClothing.length; y++) {
+    // console.log(mensClothing[y].image);
+    let image = mensClothing[y].image;
+    let currentTitle = mensClothing[y].title;
+    if (currentTitle === mensClothing[y].title) {
+    }
+  }
+
+  for (let t = 0; t < title.length; t++) {
+    let titleVal = title[t].getAttribute('data-title');
+    // console.log(titleVal);
+  }
 }
 
 // function getValue() {
