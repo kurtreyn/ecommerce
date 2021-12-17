@@ -40,7 +40,16 @@
       @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Shadows+Into+Light&display=swap');
       @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
       @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shadows+Into+Light&display=swap');
     </style>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
 
     <!-- Bootstrap CSS -->
     <link
@@ -111,10 +120,12 @@
         <div
           class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 shopping-cart"
         >
-          <img
-            src="./assets/icons/cart-shopping-solid.svg"
-            alt="shopping cart"
-          />
+          <div class="cart-btn">
+            <span class="nav-icon">
+              <i class="fas fa-cart-plus"></i>
+            </span>
+            <div class="cart-items">0</div>
+          </div>
         </div>
       </div>
       <!-- END FIRST ROW -->
@@ -247,6 +258,37 @@
       <!-- END SECOND ROW -->
     </div>
     <!-- END MAIN CONTAINER -->
+
+    <!-- Cart -->
+
+    <div class="cart">
+      <span class="close-cart">
+        <i class="fas fa-window-close"></i>
+      </span>
+      <h2>Your Cart</h2>
+      <div class="cart-content">
+        <!-- Cart Item -->
+        <!-- <div  class="cart-item">
+                      <img src="./images/product-1.jpeg" alt="product">
+                      <div>
+                          <h4>queen bed</h4>
+                          <h5>$9.00</h5>
+                          <span class="remove-item">remove</span>
+                      </div>
+                      <div>
+                          <i class="fas fa-chevron-up"></i>
+                          <p class="item-amount">1</p>
+                          <i class="fas fa-chevron-down"></i>
+                      </div>
+                  </div> -->
+        <!-- End of Cart item -->
+      </div>
+      <div class="cart-footer">
+        <h3>your total : $ <span class="cart-total">0</span></h3>
+        <button class="clear-cart banner-btn">clear cart</button>
+        <button class="check-out banner-btn">Check Out</button>
+      </div>
+    </div>
 
     <footer class="site-footer custom-footer">
       <div class="container-fluid footer-container">

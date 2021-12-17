@@ -1,6 +1,4 @@
 body {
-  font-family: "Comfortaa", cursive, sans-serif;
-  font-family: "Dancing Script", cursive, sans-serif;
   font-family: "Shadows Into Light", cursive, sans-serif;
   font-size: 1.4rem;
 }
@@ -92,17 +90,109 @@ header .nav-logo img {
 .first-row .shopping-cart img {
   max-width: 2rem;
 }
+.first-row .shopping-cart .nav-icon {
+  font-size: 1.5rem;
+}
+.first-row .shopping-cart .cart-btn {
+  position: relative;
+  cursor: pointer;
+}
+.first-row .shopping-cart .cart-items {
+  position: absolute;
+  top: -8px;
+  right: 25px;
+  background: #e63946;
+  padding: 0 5px;
+  border-radius: 30%;
+  color: #f1faee;
+}
 
+.products {
+  font-family: "Roboto", sans-serif;
+}
 .products h5 {
-  font-size: 2rem;
+  font-size: 1.3rem;
   color: #1d3557;
   border-bottom: solid 1px #e63946;
+}
+.products .card-text {
+  font-size: 1rem;
 }
 .products .add-cart-btn {
   background-color: #1d3557;
   border: solid 1px #e63946;
-  font-size: 2rem;
+  font-size: 1rem;
   color: #f1faee;
+}
+
+.cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  z-index: 3;
+  background: #a8dadc;
+  padding: 1.5rem;
+  transition: all 0.3s linear;
+  transform: translateX(100%);
+}
+@media screen and (min-width: 768px) {
+  .cart .cart {
+    width: 30vw;
+    min-width: 450px;
+  }
+}
+.cart .showCart {
+  transform: translateX(0);
+}
+.cart .transparentBcg {
+  visibility: visible;
+}
+.cart .close-cart {
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+.cart .cart h2 {
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.cart .cart-item {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr auto;
+  grid-column-gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+.cart .cart-item img {
+  width: 75px;
+  height: 75px;
+}
+.cart .cart-item h4 {
+  font-size: 0.85rem;
+}
+.cart .cart-item h5 {
+  margin: 0.5rem 0;
+}
+.cart .item-amount {
+  text-align: center;
+}
+.cart .remove-item {
+  color: grey;
+  cursor: pointer;
+}
+.cart .fa-chevron-up,
+.cart .fa-chevron-down {
+  cursor: pointer;
+}
+.cart .cart-footer {
+  margin-top: 2rem;
+  text-align: center;
+}
+.cart .cart-footer h3 {
+  margin-bottom: 1rem;
 }
 
 .custom-footer {

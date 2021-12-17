@@ -1,6 +1,6 @@
 'use strict';
 
-// https://youtu.be/023Psne_-_4?t=6376
+// link: https://youtu.be/023Psne_-_4?t=7190
 
 // https://github.com/keikaavousi/fake-store-api
 const shoppingCart = document.querySelector('.shopping-cart');
@@ -75,11 +75,18 @@ class UI {
     });
     productsDOM.innerHTML = result;
   }
+  // GET CART BUTTON METHOD
+  getCartButtons() {
+    const cartButtons = [...document.querySelectorAll('.add-cart-btn')];
+    console.log(cartButtons);
+  }
 }
 
-// LOCAL STORAGE
+// SAVE PRODUCTS TO LOCAL STORAGE
 class Storage {
-  // -
+  static saveProducts(products) {
+    localStorage.setItem('products', JSON.stringify(products));
+  }
 }
 
 // EVENT LISTENER
@@ -87,5 +94,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const ui = new UI();
   const products = new Products();
 
-  products.getProducts().then((products) => ui.displayProducts(products));
+  // GET ALL PRODUCTS
+  products
+    .getProducts()
+    .then((products) => {
+      ui.displayProducts(products);
+      Storage.saveProducts(products);
+    })
+    .then(() => {
+      ui.getCartButtons();
+    });
 });

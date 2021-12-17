@@ -1,12 +1,16 @@
+// link: https://github.com/rvutd/Comfy-House/blob/master/main.css
+
 $colorOne: #e63946;
 $colorTwo: #f1faee;
 $colorThree: #a8dadc;
 $colorFour: #457b9d;
 $colorFive: #1d3557;
 
+$transitionOne: all 0.3s linear;
+
 body {
-  font-family: 'Comfortaa', cursive, sans-serif;
-  font-family: 'Dancing Script', cursive, sans-serif;
+  // font-family: 'Comfortaa', cursive, sans-serif;
+  // font-family: 'Dancing Script', cursive, sans-serif;
   font-family: 'Shadows Into Light', cursive, sans-serif;
   font-size: 1.4rem;
 }
@@ -107,21 +111,121 @@ header {
     img {
       max-width: 2rem;
     }
+
+    .nav-icon {
+      font-size: 1.5rem;
+    }
+    .cart-btn {
+      position: relative;
+      cursor: pointer;
+    }
+    .cart-items {
+      position: absolute;
+      top: -8px;
+      right: 25px;
+      background: $colorOne;
+      padding: 0 5px;
+      border-radius: 30%;
+      color: $colorTwo;
+    }
   }
 }
 
 .products {
+  font-family: 'Roboto', sans-serif;
   h5 {
-    font-size: 2rem;
+    font-size: 1.3rem;
     color: $colorFive;
     border-bottom: solid 1px $colorOne;
+  }
+
+  .card-text {
+    font-size: 1rem;
   }
 
   .add-cart-btn {
     background-color: $colorFive;
     border: solid 1px $colorOne;
-    font-size: 2rem;
+    font-size: 1rem;
     color: $colorTwo;
+  }
+}
+
+.cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  z-index: 3;
+  background: $colorThree;
+  padding: 1.5rem;
+  transition: $transitionOne;
+  transform: translateX(100%);
+
+  @media screen and (min-width: 768px) {
+    .cart {
+      width: 30vw;
+      min-width: 450px;
+    }
+  }
+
+  .showCart {
+    transform: translateX(0);
+  }
+  .transparentBcg {
+    visibility: visible;
+  }
+
+  .close-cart {
+    font-size: 1.7rem;
+    cursor: pointer;
+  }
+  .cart h2 {
+    text-transform: capitalize;
+    text-align: center;
+
+    margin-bottom: 2rem;
+  }
+
+  .cart-item {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr auto;
+    grid-column-gap: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  .cart-item img {
+    width: 75px;
+    height: 75px;
+  }
+  .cart-item h4 {
+    font-size: 0.85rem;
+  }
+  .cart-item h5 {
+    margin: 0.5rem 0;
+  }
+  .item-amount {
+    text-align: center;
+  }
+  .remove-item {
+    color: grey;
+    cursor: pointer;
+  }
+  .fa-chevron-up,
+  .fa-chevron-down {
+    // color: var(--primaryColor);
+    cursor: pointer;
+  }
+
+  .cart-footer {
+    margin-top: 2rem;
+
+    text-align: center;
+  }
+  .cart-footer h3 {
+    margin-bottom: 1rem;
   }
 }
 
