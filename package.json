@@ -4,10 +4,11 @@
   "description": "eCommerce Project",
   "main": "index.js",
   "scripts": {
-    "build": "npm run clean && gulp mincss && gulp es && npm run imagemin && gulp cssBundle && gulp jsBundle && gulp minify",
+    "build": "npm run clean && gulp mincss && gulp es && npm run imagemin && gulp cssBundle && gulp jsBundle && gulp minify && npm run copy",
     "start": "gulp watch",
     "imagemin": "imagemin assets/images/* -o dist/assets/images && imagemin assets/icons/* -o dist/assets/icons",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist",
+    "copy": "cp products.json dist/"
   },
   "author": "Kurt Reynolds",
   "license": "ISC",

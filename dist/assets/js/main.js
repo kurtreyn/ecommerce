@@ -24,7 +24,7 @@ const cartItems = document.querySelector('.cart-items');
 const cartTotal = document.querySelector('.cart-total');
 let thisTitle = '';
 
-const url = '../products.json';
+// const url = '../products.json';
 let cart = [];
 let buttonsDOM = [];
 
@@ -32,7 +32,7 @@ let buttonsDOM = [];
 class Products {
   async getProducts() {
     try {
-      let result = await fetch(url);
+      let result = await fetch('../products.json');
       let data = await result.json();
       let products = data.items;
       products = products.map((item) => {
