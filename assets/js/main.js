@@ -1,8 +1,7 @@
 'use strict';
 
-// link: https://youtu.be/023Psne_-_4?t=10530
+// link: https://youtu.be/023Psne_-_4?t=10775
 
-// https://github.com/keikaavousi/fake-store-api
 const shoppingCart = document.querySelector('.shopping-cart');
 const products = document.querySelectorAll('[data-product]');
 const productsDOM = document.querySelector('.product-container');
@@ -15,7 +14,8 @@ const cartDOM = document.querySelector('.cart');
 const cartContent = document.querySelector('.cart-content');
 const cartItems = document.querySelector('.cart-items');
 const cartTotal = document.querySelector('.cart-total');
-let thisTitle = '';
+const clearCartBtn = document.querySelector('.clear-cart');
+// let thisTitle = '';
 
 const url = '../products.json';
 let cart = [];
@@ -158,6 +158,15 @@ class UI {
   hideCart() {
     cartDOM.classList.remove('showCart');
   }
+  cartLogic() {
+    // use arrow function so 'this' points to the method
+    clearCartBtn.addEventListener('click', () => {
+      this.clearCart();
+    });
+  }
+  clearCart() {
+    // console.log(this);
+  }
 }
 
 // SAVE PRODUCTS TO LOCAL STORAGE
@@ -196,5 +205,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .then(() => {
       ui.getCartButtons();
+      ui.cartLogic();
     });
 });
