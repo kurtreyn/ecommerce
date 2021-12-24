@@ -1,6 +1,6 @@
 'use strict';
 
-// link: https://youtu.be/023Psne_-_4?t=10775
+// link: https://youtu.be/023Psne_-_4?t=11605
 
 const shoppingCart = document.querySelector('.shopping-cart');
 const products = document.querySelectorAll('[data-product]');
@@ -160,12 +160,33 @@ class UI {
   }
   cartLogic() {
     // use arrow function so 'this' points to the method
+    // clear cart button
     clearCartBtn.addEventListener('click', () => {
       this.clearCart();
     });
+    // cart functionality
   }
   clearCart() {
     // console.log(this);
+    let cartItems = cart.map((item) => item.id);
+    // console.log(cartItems);
+    cartItems.forEach((id) => this.removeItem(id));
+    console.log(cartContent.children);
+    while (cartContent.children.length > 0) {
+      cartContent.removeChild(cartContent.children[0]);
+    }
+    this.hideCart();
+  }
+  removeItem(id) {
+    cart = cart.filter((item) => item.id !== id);
+    this.setCartValues(cart);
+    Storage.saveCart(cart);
+    let button = this.getSingleButton(id);
+    button.disabled = false;
+    button.innerHTML = `Add to Cart`;
+  }
+  getSingleButton(id) {
+    return buttonsDOM.find((button) => button.dataset.button === id);
   }
 }
 
