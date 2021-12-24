@@ -1,6 +1,6 @@
 'use strict';
 
-// link: https://youtu.be/023Psne_-_4?t=11605
+// link: https://youtu.be/023Psne_-_4?t=13116
 
 const shoppingCart = document.querySelector('.shopping-cart');
 const products = document.querySelectorAll('[data-product]');
