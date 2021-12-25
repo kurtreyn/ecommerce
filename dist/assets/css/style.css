@@ -146,9 +146,9 @@ header .nav-logo img {
   transform: translateX(100%);
   font-family: "Roboto", sans-serif;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
   .cart .cart {
-    width: 30vw;
+    width: 80vw;
     min-width: 450px;
   }
 }

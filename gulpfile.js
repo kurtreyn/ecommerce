@@ -18,7 +18,7 @@ const cssBundle = () =>
 
 //bundle JavaScript
 const jsBundle = () =>
-  src(['node_modules/bootstrap/dist/js/bootstrap.min.js', 'assets/js/main.js'])
+  src(['assets/js/main.js'])
     .pipe(concat('main.js'))
     .pipe(dest('dist/assets/js'));
 

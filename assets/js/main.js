@@ -1,7 +1,10 @@
 'use strict';
 
-// link: https://youtu.be/023Psne_-_4?t=13740
-// contentful: https://app.contentful.com/spaces/yxaudlzz1cht/content_types/new/fields
+const client = contentful.createClient({
+  space: 'yxaudlzz1cht',
+  accessToken: 'CXhbMAUvcvfmsPQzOqdsq2OFf37XAeTa_n8w7bGBMEc',
+});
+// console.log(client);
 
 const shoppingCart = document.querySelector('.shopping-cart');
 const products = document.querySelectorAll('[data-product]');
@@ -17,7 +20,7 @@ const cartItems = document.querySelector('.cart-items');
 const cartTotal = document.querySelector('.cart-total');
 const clearCartBtn = document.querySelector('.clear-cart');
 
-const url = '../products.json';
+// const url = '../products.json';
 let cart = [];
 let buttonsDOM = [];
 
@@ -25,9 +28,14 @@ let buttonsDOM = [];
 class Products {
   async getProducts() {
     try {
-      let result = await fetch(url);
-      let data = await result.json();
-      let products = data.items;
+      const contentful = await client.getEntries({
+        content_type: 'leoDesigns',
+      });
+      // console.log(contentful.items);
+
+      // let result = await fetch(url);
+      // let data = await result.json();
+      let products = contentful.items;
       products = products.map((item) => {
         const { title, price, description } = item.fields;
         const { id } = item.sys;
@@ -204,7 +212,7 @@ class UI {
     let cartItems = cart.map((item) => item.id);
     // console.log(cartItems);
     cartItems.forEach((id) => this.removeItem(id));
-    console.log(cartContent.children);
+    // console.log(cartContent.children);
     while (cartContent.children.length > 0) {
       cartContent.removeChild(cartContent.children[0]);
     }
